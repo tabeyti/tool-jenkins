@@ -1,0 +1,29 @@
+Static class for printing consistent and formatted log messages. The 'logger' class contains methods of each level for writing out the appropriate level-based message.
+
+#### Usage:
+```groovy
+logger.trace(...)
+logger.debug(...)
+logger.info(...)
+logger.warn(...)
+logger.error(...)
+```
+
+#### Examples:
+```groovy
+logger.info('Some custom info message') // [INFO] 14:09:01 - Some custom info message
+```
+```groovy
+logger.warn('Some custom warning message', 'myMethod') // [WARN] 14:09:01 - myMethod - Some custom warning message
+```
+
+
+#### message</code></dt>
+
+The message to print.
+  
+
+#### module
+
+Optional module string, such as the calling method, to be 
+formatted to the log output.

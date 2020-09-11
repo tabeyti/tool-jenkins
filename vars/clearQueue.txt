@@ -1,0 +1,6 @@
+Clears builds that are the same as the calling one from the build queue.
+
+#### Usage:
+```groovy
+clearQueue()
+```

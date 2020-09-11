@@ -1,0 +1,14 @@
+Support functions
+
+#### utils.parseJson
+
+Returns an object of the passed JSON string
+
+Args:
+    jsonString - A string representation of a JSON object
+
+``` groovy
+def myJsonString = '{ "home": " is where the hearth is"}'
+def jsonData = utils.parseJson(myJsonString)
+print jsonData.home
+```

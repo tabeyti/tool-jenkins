@@ -1,0 +1,6 @@
+Sets the stage result, without modifying the overall build status, by wrapping `catchError`.
+
+```groovy
+setStageResult 'NOT_BUILT'
+setStageResult 'FAILURE'
+```

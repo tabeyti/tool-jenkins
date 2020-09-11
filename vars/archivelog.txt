@@ -1,0 +1,21 @@
+Finds the most recent log in a directory and archives it.
+
+#### Usage:
+```groovy
+archivelog('/path/to/logs', '*-ERRORS.log', false)
+```
+
+
+#### logDir
+
+The relative path to the directory with logs.
+
+  
+#### globPattern
+  
+The glob pattern used to find the latest log. (Optional, Default: '*-ERRORS.log')
+
+
+#### archiveLog
+
+Whether to archive the log or just return it. (Optional, Default: true)

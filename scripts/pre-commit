@@ -1,0 +1,25 @@
+#!/bin/sh
+# -----------------------------------------------------------------------------
+# Pre-commit hook/script that will check for changes to any of the vars/*.txt
+# files in order to automatically update the vars/README.md file and add it to
+# the user's commit.
+# -----------------------------------------------------------------------------
+
+# Check if any of the document files in "vars/*.txt" have been modified
+VAR_FILES_STAGED=$(git diff --cached --name-status --diff-filter=ACDMR | grep ".*vars/.*\.txt")
+
+if [[ $VAR_FILES_STAGED ]]; then
+    echo "Var docs modified. Beginning script execution to update README.md"
+else
+    exit 0
+fi
+
+# Execute update README.md script
+python scripts/update_steps_readme.py
+if [[ $? -ne 0 ]]; then
+    echo "Error running update_steps_readme.py"
+    exit 1
+fi
+
+# Stage modified vars/README.md
+git add vars/README.md

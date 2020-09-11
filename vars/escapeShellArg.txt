@@ -1,0 +1,11 @@
+Escapes special characters for string needed in a shell command.
+
+```groovy
+// input: i like "things" with '$stuff' in it
+def input = params.COMMENT
+
+// input: i like \"things\" with \'\$stuff\' in it
+input = escapeShellString(input)
+
+sh "echo $input" // prints i like "things" with '$stuff' in it
+```

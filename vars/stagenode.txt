@@ -1,0 +1,21 @@
+stagenode functions
+
+#### stagenode
+
+Merges stage and node into one call and sends metrics about it.
+
+Args:
+    stageName name the stage
+    nodeName which node to use
+    closure what to execute
+
+``` groovy
+def targetNodeName = 'win-small'
+timestamps {
+    stagenode('When in Rome', targetNodeName) {
+        assertTrue(env.NODE_NAME == targetNodeName)
+        sh 'hostname && echo NODE_NAME'
+    }
+
+}
+```

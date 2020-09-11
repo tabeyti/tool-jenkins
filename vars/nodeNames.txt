@@ -1,0 +1,14 @@
+Returns a list of node names from the Jenkins master.
+
+#### Usage:
+```groovy
+println nodeNames() // ['NODE1', 'NODE2', ...]
+println nodeNames('USCGML-.*') // ['USCGML-BUILD001', 'USCGML-BUILD002', ...]
+```
+
+
+#### pattern
+
+Optional regex pattern for filtering on job names. 
+Default is all the things: `'.*'`
+  

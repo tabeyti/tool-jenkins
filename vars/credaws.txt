@@ -1,0 +1,8 @@
+Wrapper around withCredentials step for AmazonWebServicesCredentialsBinding. Overloaded so a user can specify vars for AWS_SECRET_ACCESS_KEY and AWS_SECRET_ACCESS_KEY, or use the default environmental variables 'AWS_ACCESS_KEY_ID' and 'AWS_SECRET_ACCESS_KEY'.
+
+```groovy
+credaws('some-id') {  sh "python --id $AWS_ACCESS_KEY_ID --key $AWS_SECRET_ACCESS_KEY" }
+```
+```groovy
+credaws('some-id', 'awsId', 'awsSecret') {  sh "python --id $awsId --key $awsSecret" }
+```

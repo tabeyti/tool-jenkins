@@ -1,0 +1,11 @@
+An assertion method for testing. Evaluates if the two passed objects are equal. If not, it will throw a Java Exception. Takes an optional error message to display in the exception.
+
+#### Usage:
+```groovy
+def myString = "pickles"
+assertEqual("pickles", myString)
+```
+```groovy
+def myString = "pickles"
+assertEqual("pickles", myString, "myString should be pickles!")
+```

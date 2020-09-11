@@ -1,0 +1,1 @@
+Retrieves all git branches for the provided repo address as a list of strings.

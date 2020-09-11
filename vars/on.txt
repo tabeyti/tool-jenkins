@@ -1,0 +1,37 @@
+Utility step for performing an action "on" one or more targeted nodes. Currently, the only available action is `sh`.
+
+__EXAMPLES:__
+```groovy
+// In batches of 10, for all small builders, delete this directory
+on  regex: 'USCGMW-BLDSM0.*',
+    sh: 'rm -rf D:/jenkins/workspace/test',
+    batchSize: 10
+
+// For these two builders, checkout and build a repo
+on  nodes: ['USCGMW-BUILD157', 'USCGMW-BUILD157'],
+    closure: {
+        git 'git@somerepo.com'
+        sh 'python build.py --config Debug'
+    }
+    '''
+```
+
+### `regex`
+
+Regex of the nodes you want to target. Must either use this property or the `nodes` property.
+
+### `nodes`
+
+Explicit list of node names to target. Must either use this property or the `regex` property.
+
+### `sh`
+
+The shell command to invoke on all the targeted nodes.
+
+### `closure`
+
+A `groovy` closure to invoke on each node.
+
+### `batchSize`
+
+(Optional) Value indicating the batch size for execution (default is everything). A batch itself will be ran in parallel, while each batch will be ran in serial. Used for performance.

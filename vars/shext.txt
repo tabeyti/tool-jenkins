@@ -1,0 +1,22 @@
+Extends the `sh` pipeline step, adding retries and retry condition as a part of the arg map.
+
+#### Usage:
+```groovy
+shext   retries: 3,            // Will retry twice (not including first failed run)
+        retryOnStatusCode: 127,
+        label: 'Build client',
+        script: 'python build.py -a x86_64 -c Debug'
+        
+
+```
+      
+
+
+#### `retries`
+
+The number of "attempts" the script execution will make. If 3 is specified, it will re-run __twice__, and only on a failure.
+
+
+#### `retryOnStatusCode`
+
+The target exit code to retry on. If unspecified, the call will retry on non-zero.

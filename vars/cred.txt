@@ -1,0 +1,12 @@
+Wrapper around withCredentials for username/password. Overloaded so a user can specify vars for USERNAME and PASSWORD, or use the default environmental variables 'USERNAME' and 'PASSWORD'.
+
+```groovy
+cred('some-id') { 
+  sh "python -u $USERNAME -p $PASSWORD" 
+}
+```
+```groovy
+cred('some-id', 'uname', 'pword') { 
+  sh "python -u $uname -p $pword" 
+}
+```

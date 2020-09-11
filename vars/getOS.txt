@@ -1,0 +1,9 @@
+Returns the OS of the node/agent/slave this call is invoked in. There are only three possible values to be returned: 'windows', 'mac', and 'linux'.
+
+#### Usage:
+```groovy
+node ('win-small') {
+  def os = getOS()
+  println os // displays 'windows'
+}
+```

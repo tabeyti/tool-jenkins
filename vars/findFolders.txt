@@ -1,0 +1,13 @@
+Returns a list of folder names from the current working directory.
+
+#### Usage:
+```groovy
+def folders = findFolders() // retrieves all folders in current dir
+```
+```groovy
+def folders = findFolders 'tools.*' // locates folders starting with 'tools'
+```
+
+#### pattern
+
+Optional regex pattern for filtering on folder names. Default is all the things: .*  

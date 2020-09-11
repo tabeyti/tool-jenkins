@@ -1,0 +1,21 @@
+Returns a formatted timestamp string using the give timesteamp in millis and the provided format string.
+
+#### Usage:
+```groovy
+formatTimeStamp(timeInMillis, "yyyy-MM-dd'T'HH:mm:ss.SSSZZ", 'UTC')
+```
+
+
+#### timeInMillis</code>
+
+Timestamp in milliseconds.
+
+
+#### format</code>
+
+A string date format (see https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html).
+
+  
+#### timeZone</code>
+
+Optional timezone string. Default is 'UTC'.

@@ -1,0 +1,13 @@
+Returns a list of job names on the Jenkins master.
+
+#### Usage:
+```groovy
+def jobs = findJobsNames() // retrieves all Jenkins job names.
+```
+```groovy
+def folders = findJobNames('tools-*') // locates all jobs starting with 'tools-'
+```
+
+#### pattern
+
+Optional regex pattern for filtering on job names. Default is all the things: .*  

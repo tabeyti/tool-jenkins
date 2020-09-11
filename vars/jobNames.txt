@@ -1,0 +1,24 @@
+Returns a list of job names from the Jenkins master.
+
+#### Usage:
+```groovy
+println jobNames() // ['SomeJob', 'SomeOtherJob', ...]
+println jobNames('Classic.*')  // ['ClassicMerge', 'Classic_Auto_Deploy', ...]
+println jobNames('PR.*', '/')  // ['Some/Folder/Job/PR-16', '']
+```
+
+
+#### pattern
+
+An optional regex pattern to filter on job names.
+
+
+#### folderJoinString
+
+An optional string which will be used when concatenating folder job-names.
+
+```
+Folder style job:       Classic -> game-starcraft -> master
+After join string '_':  Classic_game-starcraft_master   
+```
+  

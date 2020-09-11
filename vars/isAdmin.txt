@@ -1,0 +1,6 @@
+Returns whether the user who invoked the job is 'admin' or not. Admin list held within step source (isAdmin.groovy).
+
+#### Usage:
+```groovy
+if (isAdmin()) { /* admin stuff */ }
+```

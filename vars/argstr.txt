@@ -1,0 +1,11 @@
+Converts dynamic amount of string arguments into a space separated string. Used for formatting shell arguments.
+
+#### Usage:
+
+```groovy
+sh 'python myscript.py ' + argstr(
+  '-b $BUILD_FLAG',
+  '-c $CONFIG',
+  '-p $PUBLISH_FLAG'
+)
+```

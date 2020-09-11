@@ -1,0 +1,7 @@
+A step that prints the node you are running on. Useful for blueocean view or custom build page view.
+**NOTE:** This step requires a node context to work.
+
+#### Usage:
+```groovy
+printnode()
+```

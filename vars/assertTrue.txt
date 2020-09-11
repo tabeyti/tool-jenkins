@@ -1,0 +1,12 @@
+An assertion method validating a boolean value/epxression as true. If not, it will throw a Java Exception. Takes an optional error message to display in the exception.
+
+#### Usage:
+```groovy
+assertTrue(someValue == 23)
+```
+```groovy
+assertTrue(someService.isActive())
+```
+```groovy
+assertTrue(os == "windows", "Os must be windows")
+```

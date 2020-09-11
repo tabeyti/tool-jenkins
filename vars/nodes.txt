@@ -1,0 +1,16 @@
+Used like Pipeline step `node`, but takes in either a list OR a regex string of nodes to run on and will invoke the closure on all nodes in parallel.
+
+__EXAMPLES:__
+```groovy
+// Across all small builders, checkout this repo
+nodes('USCGMW-BLDSM.*') {
+    git 'git@somerepo.com'
+}
+
+// For these two nodes, delete `peel.log` from the `banana` workspace
+nodes(['USCGMW-BUILD157', 'USCGMW-BUILD157']) {
+    ws('workspace/banana') {
+        sh 'rm peel.log'
+    }
+}
+```

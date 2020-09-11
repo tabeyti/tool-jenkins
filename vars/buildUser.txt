@@ -1,0 +1,6 @@
+Returns a string of the user who kicked off the current build. Requires the context (global var) of 'currentBuild'.
+
+#### Usage:
+```groovy
+println buildUser() // $ tpain
+```
