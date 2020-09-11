@@ -14,7 +14,7 @@ def call(String pattern = '.*') {
  */
 @NonCPS
 def getNodesString(String delimiter, String pattern) {
-  def nodeList = []
+  def nodeList = ['master']
   for (Node node in Jenkins.instance.nodes) {
     if (!node.toComputer().online) { continue }
 

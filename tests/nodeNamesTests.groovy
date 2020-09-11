@@ -16,14 +16,14 @@ def nodeNamesTests_Smoke() {
  */
 def nodeNamesTests_RegexSmoke() {
   node('master') {
-    def allNodes = nodeNames()
+    def allNodes = nn()
     assertTrue(allNodes != null)
     assertTrue(allNodes.size() > 0)
 
-    def someNodes = nodeNames('.*')
+    def someNodes = nn('.*')
     assertTrue(someNodes != null)
     assertTrue(someNodes.size() > 0)
-    assertTrue(someNodes.size() < allNodes.size())
+    assertTrue(someNodes.size() <= allNodes.size())
   }
 }
 
