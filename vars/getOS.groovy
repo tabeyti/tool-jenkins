@@ -1,5 +1,6 @@
 def call() {
-  def out = sh returnStdout:true, script: 'echo $OSTYPE'
+  def out = sh returnStdout:true, script: 'uname'
+  out = out.toLowerCase()
   if (out.contains("msys")) {
     return "windows"
   }
@@ -9,5 +10,5 @@ def call() {
   if (out.contains("linux")) {
     return "linux"
   }
-  return out
+  return null
 }
