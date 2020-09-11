@@ -1,6 +1,6 @@
 def stagenodeTests_Smoke() {
 
-    def targetNodeName = 'win-small'
+    def targetNodeName = 'master'
     def targetStageName = 'When in Rome'
     stagenode(targetStageName, targetNodeName) {
         // Node name is the actual node name not the label, need to fix

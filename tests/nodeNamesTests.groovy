@@ -20,7 +20,7 @@ def nodeNamesTests_RegexSmoke() {
     assertTrue(allNodes != null)
     assertTrue(allNodes.size() > 0)
 
-    def someNodes = nodeNames('USCGMW-.*')
+    def someNodes = nodeNames('.*')
     assertTrue(someNodes != null)
     assertTrue(someNodes.size() > 0)
     assertTrue(someNodes.size() < allNodes.size())
