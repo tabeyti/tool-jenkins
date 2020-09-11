@@ -1,5 +1,7 @@
 # Jenkins Tools
 
+[![Build Status](http://tabeyti-jenkins.duckdns.org:8080/buildStatus/icon?style=flat-square&job=tabeyti%2Ftool-jenkins%2Fmaster)](http://tabeyti-jenkins.duckdns.org:8080/job/tabeyti/job/tool-jenkins/job/master/)
+
 A Jenkins Shared Library housing handy steps for Pipeline.
 
 ## Setup
